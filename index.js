@@ -4,6 +4,7 @@ const inquirer = require("inquirer");
 const fs = require('fs');
 // const { rejects } = require("assert");
 // console.log(fs);
+const generateMarkdown = require('./Develop/utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 const questions = readMe => {
@@ -13,7 +14,7 @@ const questions = readMe => {
     return inquirer.prompt([
         {
         type: 'input',
-        name: 'name',
+        name: 'title',
         message: 'What is the title of your project?'
         },
         {
@@ -53,12 +54,12 @@ const questions = readMe => {
    
 }
 
-questions();
+
 
 // TODO: Create a function to write README file
  const writeToFile = (fileName, data) =>{
      return new Promise((resolve, reject) => {
-     fs.writeFile(`${fileName}.md`, data,  err => {
+     fs.writeFile(`./dist/${fileName}.md`, data,  err => {
          ``
          if(err) {
              reject(err);
@@ -73,7 +74,14 @@ questions();
  }
 
 // TODO: Create a function to initialize app
-function init() {}
+ function init() {
+     questions()
+     .then(readMe => {
+         return writeToFile(readMe);
+     })
+     .then()
+     
+ }
 
 // Function call to initialize app
 init();
