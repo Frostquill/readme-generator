@@ -7,10 +7,7 @@ const fs = require('fs');
 const generateMarkdown = require('./Develop/utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
-const questions = readMe => {
-    if(!readMe) {
-        readMe = [];
-    }
+const questions = () => {
     return inquirer.prompt([
         {
         type: 'input',
@@ -42,25 +39,15 @@ const questions = readMe => {
             name: 'tests',
             message: 'provide test information'
         }
-
-
-        
-    ]).then(answers => {
-        readMe.push(answers);
-        console.log(readMe);
-
-    })
-    
-   
+    ]);
 }
 
 
-
 // TODO: Create a function to write README file
- const writeToFile = (fileName, data) =>{
-     return new Promise((resolve, reject) => {
-     fs.writeFile(`./dist/${fileName}.md`, data,  err => {
-         ``
+ const writeToFile = fileName => {
+     console.log(fileName);
+    return new Promise((resolve, reject) => { 
+     fs.writeFile(`./dist/${fileName.title}.md`, fileName,  err => {
          if(err) {
              reject(err);
              return;
@@ -70,16 +57,26 @@ const questions = readMe => {
              message: 'File Created!'
             });
          });
-     });
- }
+        //  console.log(data);
+     })
+    }
+    
+ 
 
 // TODO: Create a function to initialize app
  function init() {
      questions()
-     .then(readMe => {
-         return writeToFile(readMe);
+     .then(readMeArr => {
+        //  console.log(readMeArr);
+         return generateMarkdown(readMeArr);
      })
-     .then()
+     .then(templateData => {
+        
+         return writeToFile(templateData);
+     })
+     .catch(err => {
+         console.log(err);
+     })
      
  }
 
