@@ -74,6 +74,11 @@ module.exports = readMeData => {
   ${readMeData.tests}
 
   # Questions
+  To view further projects view my github: [${readMeData.github}](https://www.github.com/${readMeData.github})
+
+  if you have any further questions please contact me via email: (${readMeData.email})
+
+
   ${renderLicenseSection(readMeData.license)}
 
 

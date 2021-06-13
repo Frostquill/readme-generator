@@ -1,11 +1,11 @@
-# My Project
+# Frostquill
   
-![badge](https://img.shields.io/static/v1?label=License&message=apache-2.0&color=blue)
+![badge](https://img.shields.io/static/v1?label=License&message=mit&color=blue)
   
 
   # Description
 
-  lorem ipsum
+  
   
   # Table of Contents
 
@@ -18,28 +18,33 @@
 
   # Installation
 
-  lorem ipsum 
+  
 
   # Usage
 
-  lorem ipsum
+  
 
   # Contributing
 
-  lorem ipsum
+  
 
   # Tests
 
-  lorem ipsum
+  
 
   # Questions
+  To view further projects view my github: [Frostquill](https://www.github.com/Frostquill)
+
+  if you have any further questions please contact me via email: (ruiz82494@gmail.com)
+
+
   
 # License 
 the following link contains in depth details for the license assigned to this project:
 [
-    https://choosealicense.com/licenses/apache-2.0
+    https://choosealicense.com/licenses/mit
     ](
-    https://choosealicense.com/licenses/apache-2.0
+    https://choosealicense.com/licenses/mit
     )
 
 

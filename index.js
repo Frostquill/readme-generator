@@ -12,7 +12,15 @@ const questions = () => {
         {
         type: 'input',
         name: 'title',
-        message: 'What is the title of your project?'
+        message: 'What is the title of your project?',
+        validate: titleInput => {
+            if (titleInput) {
+                return true;
+            } else {
+                console.log('Please enter your project title!');
+                return false;
+            }
+        }
         },
         {
             type: 'input',
@@ -57,6 +65,17 @@ const questions = () => {
                     return false;
                 }
             }
+
+        },
+        {
+            type: 'input',
+            name: 'github',
+            message: 'please enter your github username'
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Please enter your email address'
         }
 
     ]);
@@ -67,7 +86,7 @@ const questions = () => {
  const writeToFile = fileName => {
     //  console.log(generateMarkdown(data))
     
-     fs.writeFile('./dist/readMe.md' , fileName, err => {
+     fs.writeFile('./dist/readme.md' , fileName, err => {
          if(err) {
              return console.log(err);
              
