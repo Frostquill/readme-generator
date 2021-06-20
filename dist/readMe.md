@@ -1,13 +1,13 @@
-# Frostquill
+# Readme Generator
   
 ![badge](https://img.shields.io/static/v1?label=License&message=mit&color=blue)
   
 
-  # Description
+  ## Description
 
+  project designed to allow generations of readme files using node and inquirer
   
-  
-  # Table of Contents
+  ## Table of Contents
 
   * [Installation](#installation)
   * [Usage](#usage)
@@ -16,30 +16,30 @@
   * [Questions](#questions)
   * [License](#license)
 
-  # Installation
+  ## Installation
 
-  
+  install inquirer package as well as node and clone repo to run node in command line
 
-  # Usage
+  ## Usage
 
-  
+  N/A
 
-  # Contributing
+  ## Contributing
 
-  
+  if required you can add multiple questions necessary to format readme to your liking.
 
-  # Tests
+  ## Tests
 
-  
+  N/A
 
-  # Questions
+  ## Questions
   To view further projects view my github: [Frostquill](https://www.github.com/Frostquill)
 
   if you have any further questions please contact me via email: (ruiz82494@gmail.com)
 
 
   
-# License 
+## License 
 the following link contains in depth details for the license assigned to this project:
 [
     https://choosealicense.com/licenses/mit

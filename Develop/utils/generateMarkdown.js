@@ -26,7 +26,7 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license) {return `
-# License 
+## License 
 the following link contains in depth details for the license assigned to this project:
 [${renderLicenseLink(license)}](${renderLicenseLink(license)})
 `;
@@ -44,11 +44,11 @@ module.exports = readMeData => {
   return `# ${readMeData.title}
   ${renderLicenseBadge(readMeData.license)}
 
-  # Description
+  ## Description
 
   ${readMeData.description}
   
-  # Table of Contents
+  ## Table of Contents
 
   * [Installation](#installation)
   * [Usage](#usage)
@@ -57,23 +57,23 @@ module.exports = readMeData => {
   * [Questions](#questions)
   * [License](#license)
 
-  # Installation
+  ## Installation
 
   ${readMeData.installation}
 
-  # Usage
+  ## Usage
 
   ${readMeData.usage}
 
-  # Contributing
+  ## Contributing
 
   ${readMeData.contribution}
 
-  # Tests
+  ## Tests
 
   ${readMeData.tests}
 
-  # Questions
+  ## Questions
   To view further projects view my github: [${readMeData.github}](https://www.github.com/${readMeData.github})
 
   if you have any further questions please contact me via email: (${readMeData.email})
@@ -84,3 +84,5 @@ module.exports = readMeData => {
 
 `;
 }
+
+
